@@ -29,12 +29,16 @@
 
         <div class="connection">
 
-            <span class="connection-dot simulation-dot"></span>
+            <span class="connection-dot"></span>
 
             <div>
-                <strong>Simulation Mode</strong>
-                <br>
-                <small>Using simulated sensor data</small>
+
+                <strong>Live Mode</strong>
+
+                <small>
+                    FRDM-MCXN236 connected via COM6
+                </small>
+
             </div>
 
         </div>
@@ -82,7 +86,7 @@
 
         <div class="card">
 
-            <h3>Cooling Fan</h3>
+            <h3>Ventilation</h3>
 
             <div
                 class="small-value"
@@ -149,7 +153,7 @@
             <h2>Air Quality History</h2>
 
             <span class="threshold-label">
-                Alert threshold: Simulation
+                Poor Air Threshold: Score 65
             </span>
 
         </div>
@@ -194,6 +198,7 @@
         <div class="system-status">
 
             <div>
+
                 <span class="status-label">
                     Dashboard
                 </span>
@@ -201,28 +206,33 @@
                 <strong class="status-online">
                     ● ONLINE
                 </strong>
+
             </div>
 
 
             <div>
+
                 <span class="status-label">
                     Data Source
                 </span>
 
-                <strong>
-                    Simulation
+                <strong class="status-online">
+                    FRDM-MCXN236
                 </strong>
+
             </div>
 
 
             <div>
+
                 <span class="status-label">
                     Sensor
                 </span>
 
-                <strong>
-                    Simulated
+                <strong class="status-online">
+                    ● CONNECTED
                 </strong>
+
             </div>
 
         </div>
@@ -269,6 +279,7 @@
     <footer>
 
         Last updated:
+
         <strong id="last-updated">
             --
         </strong>
