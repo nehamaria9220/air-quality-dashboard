@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Smart Air Quality Monitor</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="title">
+
+            <h1>SMART AIR QUALITY MONITOR</h1>
+
+            <p>
+                FRDM-MCXN236 • MQ-135 Environmental Monitoring System
+            </p>
+
+        </div>
+
+
+        <div class="connection">
+
+            <span class="connection-dot simulation-dot"></span>
+
+            <div>
+                <strong>Simulation Mode</strong>
+                <br>
+                <small>Using simulated sensor data</small>
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- MAIN CARDS -->
+
+    <div class="cards">
+
+
+        <!-- AIR QUALITY -->
+
+        <div class="card">
+
+            <h3>Air Quality</h3>
+
+            <div class="air-value">
+
+                <span id="air-quality">--</span>
+
+            </div>
+
+
+            <div class="status">
+
+                <span
+                    id="status-indicator"
+                    class="status-indicator status-safe">
+                </span>
+
+                <span id="status">
+                    Waiting...
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- FAN -->
+
+        <div class="card">
+
+            <h3>Cooling Fan</h3>
+
+            <div
+                class="small-value"
+                id="fan">
+                --
+            </div>
+
+            <div
+                id="fan-indicator"
+                class="device-status">
+                ● Waiting
+            </div>
+
+        </div>
+
+
+
+        <!-- BUZZER -->
+
+        <div class="card">
+
+            <h3>Buzzer / Alert</h3>
+
+            <div
+                class="small-value"
+                id="alert">
+                --
+            </div>
+
+            <div
+                id="buzzer-indicator"
+                class="device-status">
+                ● Waiting
+            </div>
+
+        </div>
+
+
+
+        <!-- ALERT COUNT -->
+
+        <div class="card">
+
+            <h3>Alerts Today</h3>
+
+            <div
+                class="small-value"
+                id="alert-count">
+                0
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- GRAPH -->
+
+    <div class="graph-card">
+
+        <div class="graph-header">
+
+            <h2>Air Quality History</h2>
+
+            <span class="threshold-label">
+                Alert threshold: Simulation
+            </span>
+
+        </div>
+
+
+        <canvas id="airChart"></canvas>
+
+
+        <!-- STATISTICS -->
+
+        <div class="statistics">
+
+            <div>
+                <span>MIN</span>
+                <strong id="min-value">--</strong>
+            </div>
+
+
+            <div>
+                <span>AVERAGE</span>
+                <strong id="average-value">--</strong>
+            </div>
+
+
+            <div>
+                <span>MAX</span>
+                <strong id="max-value">--</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- SYSTEM STATUS -->
+
+    <div class="graph-card">
+
+        <h2>System Status</h2>
+
+        <div class="system-status">
+
+            <div>
+                <span class="status-label">
+                    Dashboard
+                </span>
+
+                <strong class="status-online">
+                    ● ONLINE
+                </strong>
+            </div>
+
+
+            <div>
+                <span class="status-label">
+                    Data Source
+                </span>
+
+                <strong>
+                    Simulation
+                </strong>
+            </div>
+
+
+            <div>
+                <span class="status-label">
+                    Sensor
+                </span>
+
+                <strong>
+                    Simulated
+                </strong>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ALERT HISTORY -->
+
+    <div class="graph-card">
+
+        <div class="history-header">
+
+            <h2>Alert History</h2>
+
+            <button
+                id="clear-history"
+                class="clear-button">
+                Clear History
+            </button>
+
+        </div>
+
+
+        <div class="alert-history-container">
+
+            <div id="alert-history">
+
+                <p id="no-alerts">
+                    No alerts recorded yet.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        Last updated:
+        <strong id="last-updated">
+            --
+        </strong>
+
+    </footer>
+
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="/static/dashboard.js"></script>
+
+
+</body>
+
+</html>
